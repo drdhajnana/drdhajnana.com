@@ -107,13 +107,4 @@ flutter:
         - asset: assets/fonts/Ubuntu-Regular.ttf
           style: normal
           weight: 400
-    - family: Chocolate
-      fonts:
-        - asset: assets/fonts/ChocolateBoxDecorative.ttf
-          style: normal
-          weight: 400
-    - family: SFPro
-      fonts:
-        - asset: assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf
-          style: normal
-          weight: 400
+
