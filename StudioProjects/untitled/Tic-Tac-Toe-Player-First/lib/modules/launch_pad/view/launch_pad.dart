@@ -54,7 +54,7 @@ class LaunchPadState extends State<LaunchPad> {
     ];
 
     count = 0;
-    launchPadModel.placeValue = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+    launchPadModel.placeValue = List.filled(9, 0, growable: false) ;
   }
 
   @override
@@ -276,7 +276,7 @@ class LaunchPadState extends State<LaunchPad> {
       ];
 
       count = 0;
-      launchPadModel.placeValue = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+      launchPadModel.placeValue = List.filled(9, 0, growable: false) ;
     });
   }
 
