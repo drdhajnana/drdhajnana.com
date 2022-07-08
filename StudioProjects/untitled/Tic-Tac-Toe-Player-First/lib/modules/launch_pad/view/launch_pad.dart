@@ -168,19 +168,20 @@ class LaunchPadState extends State<LaunchPad> {
   }
 
   /// Delay Working Properly
-  void delay(count) {
+  void delay() {
     Timer(const Duration(seconds: 1), () {
-      bot(count);
+      bot();
     });
   }
 
   /// Bot method Working Properly
-  bot(count) {
+  bot() {
     int i = 0;
     bool botWon = false;
     bool playerWon = false;
-
+    count++; // for bots move
     if (count < 9) {
+
       if (count == 2 && i == 0) {
         /// Place first step.
         i = snippet.botFirst(launchPadModel);
@@ -298,8 +299,8 @@ class LaunchPadState extends State<LaunchPad> {
                   launchPadModel.customColor[i] = Colors.blue;
                   launchPadModel.players = false;
                 }),
-                count++, // for bots move
-                delay(count),
+
+                delay(),
               }
           },
           color: launchPadModel.customColor[i],
