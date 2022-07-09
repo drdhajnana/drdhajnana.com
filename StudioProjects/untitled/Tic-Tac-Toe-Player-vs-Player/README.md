@@ -29,9 +29,9 @@ Follow these steps:
 
 Tic-Tac-Toe game for Android Mobile
 Assumptions:
-Game Players: Human (Player 1 - ‘X’) vs Human (Player 2 - ‘O’)
+Game Players: Human(Player - ‘X’) vs Program (Bot - ‘O’)
 Difficulty Level: Medium
-First Move: Player 1 - ‘X’
+First Move: Player - ‘X’
 Outcome: Win, Lose, Draw.
 
 
