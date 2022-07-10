@@ -27,6 +27,7 @@ class LaunchPadState extends State<LaunchPad> {
     launchPadModel.resultDeclared = true;
     launchPadModel.player1 = true;
     launchPadModel.isDraw = true;
+
     launchPadModel.customIcon = [
       Icons.cancel,
       Icons.cancel,
@@ -242,19 +243,25 @@ class LaunchPadState extends State<LaunchPad> {
           alignment: Alignment.center,
           onPressed: () => {
             mod = count % 2,
-            count++,
-            if (mod != 0 && launchPadModel.player1 && count < 9)
+            if (mod == 0 &&
+                launchPadModel.player1 &&
+                count < 9 &&
+                launchPadModel.resultDeclared &&
+                launchPadModel.placeValue[i] == 0)
               {
-
+                count++, // for Player 1's move
                 setState(() {
                   launchPadModel.placeValue[i] = 1;
                   launchPadModel.customColor[i] = Colors.blue;
                   launchPadModel.player1 = false;
                 }),
               }
-            else
+            else if (mod != 0 &&
+                count < 9 &&
+                launchPadModel.resultDeclared &&
+                launchPadModel.placeValue[i] == 0)
               {
-
+                count++, // for Player 2's move
                 setState(() {
                   launchPadModel.customColor[i] = Colors.amber;
                   launchPadModel.customIcon[i] = Icons.radio_button_off;
@@ -294,6 +301,3 @@ class LaunchPadState extends State<LaunchPad> {
     );
   }
 }
-
-
-
