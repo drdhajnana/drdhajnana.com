@@ -242,9 +242,10 @@ class LaunchPadState extends State<LaunchPad> {
           alignment: Alignment.center,
           onPressed: () => {
             mod = count % 2,
-            if (mod == 0 && launchPadModel.player1)
+            count++,
+            if (mod != 0 && launchPadModel.player1 && count < 9)
               {
-                count++, // for player 1 move
+
                 setState(() {
                   launchPadModel.placeValue[i] = 1;
                   launchPadModel.customColor[i] = Colors.blue;
@@ -253,7 +254,7 @@ class LaunchPadState extends State<LaunchPad> {
               }
             else
               {
-                count++, // for player 2 move
+
                 setState(() {
                   launchPadModel.customColor[i] = Colors.amber;
                   launchPadModel.customIcon[i] = Icons.radio_button_off;
